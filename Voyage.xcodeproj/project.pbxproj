@@ -11,6 +11,8 @@
 		36050F672A3221A100D6670F /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36050F662A3221A100D6670F /* WeatherData.swift */; };
 		36050F692A322B4B00D6670F /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36050F682A322B4B00D6670F /* WeatherModel.swift */; };
 		36252E912A30E89E0054392F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36252E902A30E89E0054392F /* WeatherViewController.swift */; };
+		3653F8122A39C022007BE076 /* DollarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3653F8112A39C022007BE076 /* DollarManager.swift */; };
+		3653F8142A3B0A1F007BE076 /* DollarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3653F8132A3B0A1F007BE076 /* DollarData.swift */; };
 		36BDBD482A16222B004EB5D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDBD472A16222B004EB5D4 /* AppDelegate.swift */; };
 		36BDBD4A2A16222B004EB5D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDBD492A16222B004EB5D4 /* SceneDelegate.swift */; };
 		36BDBD4C2A16222B004EB5D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDBD4B2A16222B004EB5D4 /* ViewController.swift */; };
@@ -21,7 +23,7 @@
 		36BDBD622A16222D004EB5D4 /* VoyageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDBD612A16222D004EB5D4 /* VoyageTests.swift */; };
 		36BDBD6C2A16222D004EB5D4 /* VoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDBD6B2A16222D004EB5D4 /* VoyageUITests.swift */; };
 		36BDBD6E2A16222D004EB5D4 /* VoyageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDBD6D2A16222D004EB5D4 /* VoyageUITestsLaunchTests.swift */; };
-		36BDBD862A163ED2004EB5D4 /* ExchangeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDBD852A163ED2004EB5D4 /* ExchangeTableViewController.swift */; };
+		36BDBD862A163ED2004EB5D4 /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDBD852A163ED2004EB5D4 /* ExchangeViewController.swift */; };
 		36BDBD882A163EE9004EB5D4 /* TranslateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BDBD872A163EE9004EB5D4 /* TranslateTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		36050F662A3221A100D6670F /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		36050F682A322B4B00D6670F /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		36252E902A30E89E0054392F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		3653F8112A39C022007BE076 /* DollarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarManager.swift; sourceTree = "<group>"; };
+		3653F8132A3B0A1F007BE076 /* DollarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarData.swift; sourceTree = "<group>"; };
 		36BDBD442A16222B004EB5D4 /* Voyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BDBD472A16222B004EB5D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36BDBD492A16222B004EB5D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +65,7 @@
 		36BDBD672A16222D004EB5D4 /* VoyageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoyageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36BDBD6B2A16222D004EB5D4 /* VoyageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageUITests.swift; sourceTree = "<group>"; };
 		36BDBD6D2A16222D004EB5D4 /* VoyageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		36BDBD852A163ED2004EB5D4 /* ExchangeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTableViewController.swift; sourceTree = "<group>"; };
+		36BDBD852A163ED2004EB5D4 /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
 		36BDBD872A163EE9004EB5D4 /* TranslateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,7 +187,7 @@
 		36BDBD7E2A163D02004EB5D4 /* ExchangeController */ = {
 			isa = PBXGroup;
 			children = (
-				36BDBD852A163ED2004EB5D4 /* ExchangeTableViewController.swift */,
+				36BDBD852A163ED2004EB5D4 /* ExchangeViewController.swift */,
 			);
 			path = ExchangeController;
 			sourceTree = "<group>";
@@ -216,6 +220,8 @@
 		36BDBD822A163D84004EB5D4 /* CurencyExchange */ = {
 			isa = PBXGroup;
 			children = (
+				3653F8112A39C022007BE076 /* DollarManager.swift */,
+				3653F8132A3B0A1F007BE076 /* DollarData.swift */,
 			);
 			path = CurencyExchange;
 			sourceTree = "<group>";
@@ -351,14 +357,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3653F8142A3B0A1F007BE076 /* DollarData.swift in Sources */,
 				36BDBD4C2A16222B004EB5D4 /* ViewController.swift in Sources */,
 				36BDBD482A16222B004EB5D4 /* AppDelegate.swift in Sources */,
+				3653F8122A39C022007BE076 /* DollarManager.swift in Sources */,
 				36050F652A3213BF00D6670F /* WeatherManager.swift in Sources */,
 				36BDBD522A16222B004EB5D4 /* Voyage.xcdatamodeld in Sources */,
 				36050F692A322B4B00D6670F /* WeatherModel.swift in Sources */,
 				36BDBD882A163EE9004EB5D4 /* TranslateTableViewController.swift in Sources */,
 				36252E912A30E89E0054392F /* WeatherViewController.swift in Sources */,
-				36BDBD862A163ED2004EB5D4 /* ExchangeTableViewController.swift in Sources */,
+				36BDBD862A163ED2004EB5D4 /* ExchangeViewController.swift in Sources */,
 				36050F672A3221A100D6670F /* WeatherData.swift in Sources */,
 				36BDBD4A2A16222B004EB5D4 /* SceneDelegate.swift in Sources */,
 			);
