@@ -21,7 +21,7 @@ class TranslateTableViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textToTranslate.delegate = self
-      
+        textToTranslate.text = ""
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -36,27 +36,23 @@ class TranslateTableViewController: UIViewController, UITextViewDelegate {
         
     }
     @objc func keyBoardWillAppear(_ notification: Notification) {
-        if textToTranslate.isFirstResponder {
-            if let size = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                let height = size.height
-                UIView.animate(withDuration: 0.5) {
-                    self.view.center.y -= (height * 4/5)
-                }
-                
+        
+        if let size = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let height = size.height
+            UIView.animate(withDuration: 0.5) {
+                self.view.center.y -= (height * 4/5)
             }
             
         }
     }
     @objc func keyBoardWillDisappear(_ notification: Notification) {
-        if textToTranslate.isFirstResponder {
-            if let size = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                let height = size.height
-                UIView.animate(withDuration: 0.5) {
-                    self.view.center.y += (height * 4/5)
-                }
-            }
-        } 
         
+        if let size = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let height = size.height
+            UIView.animate(withDuration: 0.5) {
+                self.view.center.y += (height * 4/5)
+            }
+        }
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
         
@@ -64,9 +60,10 @@ class TranslateTableViewController: UIViewController, UITextViewDelegate {
     }
     func textViewDidEndEditing(_ textView: UITextView) {
         // ici je récupère ma traduction
-        textTranslated.text = textToTranslate.text
+        //textTranslated.text = textToTranslate.text
         print("Did end ")
     }
+    
     
     @IBAction func translate(_ sender: UIButton) {
         print(textToTranslate.text!)
@@ -74,16 +71,16 @@ class TranslateTableViewController: UIViewController, UITextViewDelegate {
         translateManager.getTranslation()
     }
     
-//    
-//    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-//        if textView.text != "" {
-//
-//                    } else {
-//                        textView.text = "Please tape a text to be translate"
-//                        return false
-//                    }
-//    }
- 
+    //
+    //    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+    //        if textView.text != "" {
+    //
+    //                    } else {
+    //                        textView.text = "Please tape a text to be translate"
+    //                        return false
+    //                    }
+    //    }
+    
 }
 
 
