@@ -217,7 +217,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Texte a traduire" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QqN-fQ-xaa">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="QqN-fQ-xaa">
                                                 <rect key="frame" x="0.0" y="300" width="390" height="280"/>
                                                 <color key="backgroundColor" red="0.039215687659999998" green="0.12549020350000001" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

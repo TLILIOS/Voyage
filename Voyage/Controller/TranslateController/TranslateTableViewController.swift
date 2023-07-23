@@ -20,8 +20,9 @@ class TranslateTableViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         textToTranslate.delegate = self
-        textToTranslate.text = ""
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -36,14 +37,14 @@ class TranslateTableViewController: UIViewController, UITextViewDelegate {
         
     }
     @objc func keyBoardWillAppear(_ notification: Notification) {
-        
+         
         if let size = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let height = size.height
             UIView.animate(withDuration: 0.5) {
                 self.view.center.y -= (height * 4/5)
             }
-            
         }
+        
     }
     @objc func keyBoardWillDisappear(_ notification: Notification) {
         
@@ -55,12 +56,13 @@ class TranslateTableViewController: UIViewController, UITextViewDelegate {
         }
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
-        
+        textToTranslate.text = ""
         print("Did begin")
     }
     func textViewDidEndEditing(_ textView: UITextView) {
+       
         // ici je récupère ma traduction
-        //textTranslated.text = textToTranslate.text
+        textTranslated.text = textToTranslate.text
         print("Did end ")
     }
     
@@ -71,15 +73,18 @@ class TranslateTableViewController: UIViewController, UITextViewDelegate {
         translateManager.getTranslation()
     }
     
-    //
-    //    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-    //        if textView.text != "" {
-    //
-    //                    } else {
-    //                        textView.text = "Please tape a text to be translate"
-    //                        return false
-    //                    }
-    //    }
+    
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        if textView.text != "" {
+            textView.endEditing(true)
+            return true
+        } else {
+            textView.text = "Please tape a text to be translate"
+            textView.textColor = .lightGray
+            textView.font = .boldSystemFont(ofSize: 20)
+            return false
+        }
+    }
     
 }
 
